@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "src/hello/pb";
+
+message GenericMessage{
+    string body = 1;
+}
+
+service HelloService {
+    rpc SayHello(GenericMessage) returns (GenericMessage) {};
+}
